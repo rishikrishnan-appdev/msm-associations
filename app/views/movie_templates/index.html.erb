@@ -57,6 +57,10 @@
     </td>
 
     <td>
+      <%= Director.find_by( {:id => movie.director_id} ).name %>
+    </td>
+
+    <td>
       <a href="/movies/<%= movie.id %>" class="btn btn-primary">
         Show details
       </a>

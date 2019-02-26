@@ -32,6 +32,17 @@
     <input type="text" id="duration" name="duration" class="form-control">
   </div>
 
+  <!-- Label and input for director -->
+  <div class="form-group">
+    <label for="director_id">
+      Director
+    </label>
+    <%= select_tag("director_id", options_from_collection_for_select(Director.all, :id, :name, @movie.try(:director_id)), :class => "form-control") %>
+    <a href="/directors/new">
+      Add a new director
+    </a>
+  </div>
+
   <!-- Label and input for description -->
   <div class="form-group">
     <label for="description">
@@ -49,6 +60,7 @@
 
     <input type="text" id="image_url" name="image_url" class="form-control">
   </div>
+  
 
   <button class="btn btn-block btn-outline-secondary">
     Create movie

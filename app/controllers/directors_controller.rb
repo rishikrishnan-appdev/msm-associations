@@ -23,8 +23,8 @@ class DirectorsController < ApplicationController
     @director.bio = params.fetch("bio")
     @director.image_url = params.fetch("image_url")
     @director.save
+      redirect_to("/directors", :notice => "Director created successfully.")
 
-    redirect_to("/directors", :notice => "Director created successfully.")
   end
 
   def edit_form
@@ -41,8 +41,7 @@ class DirectorsController < ApplicationController
     @director.bio = params.fetch("bio")
     @director.image_url = params.fetch("image_url")
     @director.save
-
-    redirect_to("/directors/#{@director.id}", :notice => "Director updated successfully.")
+      redirect_to("/directors/#{@director.id}", :notice => "Director updated successfully.")
   end
 
   def destroy_row

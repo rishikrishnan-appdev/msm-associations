@@ -38,6 +38,14 @@
   </dd>
 
   <dt>
+    Director
+  </dt>
+  <dd>
+    <%= Director.find_by( {:id => @movie.director_id} ).name %>
+  </dd>
+
+
+  <dt>
     Image
   </dt>
   <dd>
